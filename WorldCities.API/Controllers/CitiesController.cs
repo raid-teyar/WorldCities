@@ -38,7 +38,9 @@ namespace WorldCities.API.Controllers
                 pageIndex,
                 pageSize,
                 sortColumn,
-                sortOrder);
+                sortOrder,
+                filterColumn,
+                filterQuery);
         }
 
         // GET: api/Cities/5
