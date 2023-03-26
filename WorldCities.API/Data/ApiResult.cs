@@ -78,7 +78,6 @@ namespace WorldCities.API.Data
             return new ApiResult<T>(data, count, pageIndex, pageSize, sortColumn,
                 sortOrder, filterColumn, filterQuery);
         }
-
         /// <summary>
         /// Checks if the given property name exists
         /// to protect against SQL injection attacks

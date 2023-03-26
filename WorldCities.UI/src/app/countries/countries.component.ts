@@ -5,7 +5,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 
 import { Country } from './Country';
-import { environment } from './../../environments/environment';
+import { environment } from './../../environments/environment.prod';
 
 @Component({
   selector: 'app-countries',
@@ -62,7 +62,7 @@ export class CountriesComponent implements OnInit {
         this.paginator.length = data.totalCount;
         this.paginator.pageIndex = data.pageIndex;
         this.paginator.pageSize = data.pageSize;
-        this.countries = new MatTableDataSource<Country>(data.items);
+        this.countries = new MatTableDataSource<Country>(data.data);
       },
       (error) => {
         console.log(error);

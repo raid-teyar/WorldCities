@@ -29,7 +29,7 @@ namespace WorldCities.API.Controllers
         public async Task<ActionResult<ApiResult<Country>>> GetCountries(int pageIndex = 0, int pageSize = 10,
             string? sortColumn = null, string? sortOrder = null, string? filterColumn = null, string? filterQuery = null)
         {
-            if (_context.Cities == null)
+            if (_context.Countries == null)
             {
                 return NotFound();
             }
