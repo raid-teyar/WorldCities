@@ -70,7 +70,7 @@ namespace WorldCities.API.Data
             }
 
             source = source
-            .Skip(pageIndex * pageSize)
+            .Skip((pageIndex - 1) * pageSize)
             .Take(pageSize);
 
             var data = await source.ToListAsync();
