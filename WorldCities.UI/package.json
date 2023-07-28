@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "start": "nx serve",
+    "build": "nx build",
+    "watch": "nx build --watch --configuration development",
+    "test": "nx test"
   },
   "private": true,
   "dependencies": {
@@ -19,23 +19,38 @@
     "@angular/material": "^13.0.0",
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
+    "@angular/pwa": "^0.5.3",
     "@angular/router": "^14.2.0",
+    "@angular/service-worker": "^14.2.0",
+    "angular-connection-service": "^13.0.1",
+    "apollo-angular": "^5.0.0",
     "jest-editor-support": "*",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "@apollo/client": "^3.0.0",
+    "graphql": "^16"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.6",
+    "@angular-devkit/core": "~14.2.6",
+    "@angular-devkit/schematics": "~14.2.6",
     "@angular/cli": "~14.2.6",
     "@angular/compiler-cli": "^14.2.0",
+    "@chiragrupani/karma-chromium-edge-launcher": "^2.3.1",
+    "@nx/angular": "16.3.2",
+    "@nx/workspace": "16.3.2",
+    "@schematics/angular": "~14.2.6",
     "@types/jasmine": "~4.0.0",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
+    "karma-edge-launcher": "^0.4.2",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "nx": "16.3.2",
+    "nx-cloud": "latest",
     "typescript": "~4.7.2"
   }
 }

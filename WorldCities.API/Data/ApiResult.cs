@@ -69,9 +69,7 @@ namespace WorldCities.API.Data
                 source = source.OrderBy(string.Format("{0} {1}", sortColumn, sortOrder));
             }
 
-            source = source
-            .Skip((pageIndex - 1) * pageSize)
-            .Take(pageSize);
+            source = source.Skip(((pageIndex > 0 ? pageIndex : 1) - 1) * pageSize).Take(pageSize);
 
             var data = await source.ToListAsync();
 

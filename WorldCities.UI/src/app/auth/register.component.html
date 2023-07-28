@@ -1,0 +1,90 @@
+<div>
+  <h1>Register</h1>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <p>
+      <mat-error *ngIf="registerResult && !registerResult.success">
+        <strong>ERROR</strong>: {{ registerResult.errors }}
+      </mat-error>
+    </p>
+
+    <!-- UserName -->
+    <mat-form-field>
+      <mat-label>UserName:</mat-label>
+      <input
+        matInput
+        formControlName="userName"
+        required
+        placeholder="Type a user name"
+      />
+
+      <mat-error
+        *ngFor="let error of getErrors(form.get('userName')!, 'UserName')"
+      >
+        {{ error }}
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Email -->
+    <mat-form-field>
+      <mat-label>Email:</mat-label>
+      <input
+        matInput
+        formControlName="email"
+        required
+        placeholder="Type an email"
+      />
+
+      <mat-error *ngFor="let error of getErrors(form.get('email')!, 'Email')">
+        {{ error }}
+      </mat-error>
+    </mat-form-field>
+
+    <!-- PhoneNumber -->
+    <mat-form-field>
+      <mat-label>PhoneNumber:</mat-label>
+      <input
+        matInput
+        formControlName="phoneNumber"
+        required
+        placeholder="Type a phone number"
+      />
+
+      <mat-error
+        *ngFor="let error of getErrors(form.get('phoneNumber')!, 'PhoneNumber')"
+      >
+        {{ error }}
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Password -->
+    <mat-form-field>
+      <mat-label>Password:</mat-label>
+      <input
+        matInput
+        formControlName="password"
+        required
+        placeholder="Type a password"
+      />
+
+      <mat-error
+        *ngFor="let error of getErrors(form.get('password')!, 'Password')"
+      >
+        {{ error }}
+      </mat-error>
+    </mat-form-field>
+
+    <div>
+      <button
+        mat-flat-button
+        color="primary"
+        type="submit"
+        [disabled]="!form.valid"
+      >
+        Register
+      </button>
+      <button mat-flat-button color="secondary" [routerLink]="['/']">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>
